@@ -1,0 +1,20 @@
+GitWebの使い方
+
+①ブラウザからプロジェクトを作成
+
+②後はクライアント側で作業
+
+# Client
+
+git clone git@192.168.0.123:XXX.git
+cd XXX
+
+# Edit
+
+git add .
+git commit -m "by HDM"
+git push
+
+windowsからでも編集できることを確認しました。
+https://gitforwindows.org/
+
