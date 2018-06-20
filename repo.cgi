@@ -53,7 +53,7 @@ function cgi_decodevar()
             v="${v}"`echo -e \\\\x${h}` # convert hex to special char
         fi
     done
-    # return decoded strプロジェクトin~g
+    # return decoded string
     echo "${v}"
     return
 }
@@ -93,7 +93,7 @@ function cgi_getvars()
         [ "$1" = "ALL" -o "${s/ $k /}" != "$s" ] && \
             export "$k"="`cgi_decodevar \"$v\"`"
     done
-    returnプロジェクト
+    return
 }
 
 # register all GET and POST variables
