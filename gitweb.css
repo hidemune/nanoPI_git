@@ -76,7 +76,7 @@ td.list a[href*='tree'], td.list a[href*='blob'] {
   display: block;
   float: left;
   height: 16px;
-  line-height: 16px;
+  line-height: 16px;192.168.0.123
 }
 
 td.list a[href*='tree'] {
@@ -710,6 +710,14 @@ a.linenr {
    -webkit-user-select: none;
    user-select: none;
    font-size: 62.5%;
+}
+
+span.cntrl {
+   -ms-user-select: none; /* IE 10+ */
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   user-select: none;
 }
 
 /* JavaScript-based timezone manipulation */

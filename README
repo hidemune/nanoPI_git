@@ -15,6 +15,39 @@ git add .
 git commit -m "by HDM"
 git push
 
+git add .
+git commit -m "by Toshi"
+git push
+
+git add .
+git commit -m "by Satoru"
+git push
+
 windowsからでも編集できることを確認しました。
 https://gitforwindows.org/
+
+
+他の人が編集した後は、PullしてからPushしないと
+競合してめんどくさいから気をつけてね。
+
+
+
+
+
+・MEMO プロジェクト作成でやってること
+
+# Server
+
+# リポジトリ作成
+ssh root@192.168.0.123
+# -------
+cd /home/git
+mkdir XXX.git
+cd XXX.git
+git init --bare
+git update-server-info
+chmod -R 777 .
+#chown -R git:git .
+#説明文を編集
+nano description
 
