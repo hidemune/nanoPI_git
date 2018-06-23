@@ -8,8 +8,8 @@
 # This program is licensed under the GPLv2
 
 use utf8;
-use open IO => ':encoding(UTF-8)';
-binmode STDOUT, ':encoding(UTF-8)';
+#use open IO => ':encoding(UTF-8)';
+#binmode STDOUT, ':encoding(UTF-8)';
 
 use 5.008;
 use strict;
@@ -339,7 +339,8 @@ our %feature = (
 	'snapshot' => {
 		'sub' => \&feature_snapshot,
 		'override' => 0,
-		'default' => ['tgz']},
+		'default' => ['zip']},
+		#'default' => ['tgz']},
 
 	# Enable text search, which will list the commits which match author,
 	# committer or commit text to a given string.  Enabled by default.
