@@ -124,7 +124,8 @@ our $javascript = "static/gitweb.js";
 # URI and label (title) of GIT logo link
 #our $logo_url = "http://www.kernel.org/pub/software/scm/git/docs/";
 #our $logo_label = "git documentation";
-our $logo_url = "http://192.168.0.123/";
+our $git_address = "192.168.0.123";
+our $logo_url = "http://" . $git_address . "/";
 our $logo_label = "git homepage";
 
 # source of projects list
@@ -4372,7 +4373,12 @@ sub git_print_page_nav {
 		       $_ : $cgi->a({-href => ($arg{$_}{_href} ? $arg{$_}{_href} : href(%{$arg{$_}}))}, "$_")
 		 } @navs);
 	print "<br/>\n$extra<br/>\n" .
+	      "<br/><pre># Clone code ...</pre>\n" .
+	      "<br/><pre>  git clone git@" . $git_address . ":" . $project . " </pre>\n" .
+
 	      "</div>\n";
+	      
+	
 }
 
 # returns a submenu for the nagivation of the refs views (tags, heads,
